@@ -3,6 +3,9 @@
 // b. model (string): The model of the car, e.g., "Camry".
 // c. year (number): The year the car was manufactured, e.g., 2020.
 // d. isAvailable (boolean): Indicates if the car is currently available for rent.
+// / The Car class or function constructor should also have a method called
+// toggleAvailability that changes the isAvailable property to its opposite value (true to
+// false, false to true)
 class Car {
     constructor(make, model, year, isAvailable){
         this.make = make;
@@ -15,6 +18,15 @@ class Car {
     }
     const car1 = new Car("Toyota", "Camry", 2020, true);
     console.log(car1);
+
+
+    // / 2) Create a Rental class or function constructor that has the following properties:
+// ● car (Car object): The car that has been rented.
+// ● renterName (string): The name of the person who rented the car.
+// ● rentalStartDate (Date object): The start date of the rental period.
+// ● rentalEndDate (Date object): The end date of the rental period.
+// The Rental class or function constructor should also have a method called
+// calculateRentalDuration that returns the rental duration in days.
 
     class Rental {
         constructor(car, renterName, rentalStartDate, rentalEndDate) {
@@ -37,6 +49,10 @@ const rental = new Rental(car, "Milcah Nkatha", "2023-05-01", "2023-05-05");
 const rentalDuration = rental.calculateRentalDuration();
 console.log(rentalDuration);
 
+// 3) Create an instance of the Car class or function constructor for a car in the
+// inventory. Then, create an instance of the Rental class or function constructor for
+// a rental involving the car you created. Finally, calculate the rental duration using
+// the calculateRentalDuration method.
 class Question {
     constructor(text, options, correctAnswer){
         this.text = text;
@@ -87,3 +103,13 @@ class Quiz{
         }
     }
 }
+const quiz1 = new Quiz();
+const question1 = new Question("What is the capital of Kenya?", ["Nakuru", "Kisumu", "Mombasa", "Naoribi"], "Nairobi");
+const question2 = new Question("What is the largest planet in our solar system?", ["Jupiter", "Saturn", "Mars", "Venus"], "Jupiter");
+quiz1.addQuestion(question1);
+quiz1.addQuestion(question2);
+
+quiz1.submitAnswer("Nairobi");
+quiz1.nextQuestion();
+quiz1.submitAnswer("Jupiter");
+console.log(quiz1.score);
