@@ -104,12 +104,12 @@ class Quiz{
     }
 }
 const quiz1 = new Quiz();
-const question1 = new Question("What is the capital of Kenya?", ["Nakuru", "Kisumu", "Mombasa", "Naoribi"], "Nairobi");
-const question2 = new Question("What is the largest planet in our solar system?", ["Jupiter", "Saturn", "Mars", "Venus"], "Jupiter");
+const question1 = new Question("What is the largest continent? "["Africa", "Europe", "North America", "Asia"], "Asia");
+const question2 = new Question("How many legs does an insect have", [3,2,6,8], 6);
 quiz1.addQuestion(question1);
 quiz1.addQuestion(question2);
 
-quiz1.submitAnswer("Nairobi");
+quiz1.submitAnswer("Asia");
 quiz1.nextQuestion();
-quiz1.submitAnswer("Jupiter");
+quiz1.submitAnswer(2);
 console.log(quiz1.score);
