@@ -16,7 +16,7 @@ class Car {
         this.isAvailable = !this.isAvailable;
       };
     }
-    const car1 = new Car("Toyota", "Camry", 2020, true);
+    const car1 = new Car("Mazda", "Demio", 2022, true);
     console.log(car1);
 
 
