@@ -58,8 +58,8 @@ class Question {
         this.options = options;
         this.correctAnswer = correctAnswer
     }
-    checkAnswer(userAnswer){
-        return userAnswer === this.correctAnswer;
+    checkAnswer(answer){
+        return answer === this.correctAnswer;
     }
 }
 
