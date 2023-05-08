@@ -39,9 +39,7 @@ class Car {
             const oneDay = 24 * 60 * 60 * 1000; // hours * minutes * seconds * milliseconds
             const startDate = new Date(this.rentalStartDate);
             const endDate = new Date(this.rentalEndDate);
-            const diffDays = Math.round(Math.abs((startDate - endDate) / oneDay));
-            return diffDays;
-          }
+        }
         }
 // 3) Create an instance of the Car class or function constructor for a car in the
 // inventory. Then, create an instance of the Rental class or function constructor for
