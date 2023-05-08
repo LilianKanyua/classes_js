@@ -45,7 +45,7 @@ class Car {
         }
       
 const car = new Car("Toyota", "Camry", 2020, true);
-const rental = new Rental(car, "Milcah Nkatha", "2023-05-01", "2023-05-05");
+const rental = new Rental(car, "Lilian Kanyua", "2023-05-01", "2023-05-05");
 const rentalDuration = rental.calculateRentalDuration();
 console.log(rentalDuration);
 
