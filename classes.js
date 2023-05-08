@@ -43,16 +43,17 @@ class Car {
             return diffDays;
           }
         }
-      
-const car = new Car("Toyota", "Camry", 2020, true);
-const rental = new Rental(car, "Lilian Kanyua", "2023-05-01", "2023-05-05");
-const rentalDuration = rental.calculateRentalDuration();
-console.log(rentalDuration);
-
 // 3) Create an instance of the Car class or function constructor for a car in the
 // inventory. Then, create an instance of the Rental class or function constructor for
 // a rental involving the car you created. Finally, calculate the rental duration using
 // the calculateRentalDuration method.
+
+const car = new Car("Mazda", "Demio", 2022, true);
+const rental = new Rental(car, "Lilian", "2023-05-01", "2023-05-03");
+const rentalDuration = rental.calculateRentalDuration();
+console.log(rentalDuration);
+
+
 class Question {
     constructor(text, options, correctAnswer){
         this.text = text;
@@ -63,11 +64,6 @@ class Question {
         return userAnswer === this.correctAnswer;
     }
 }
-
-const question = new Question("Who was the first president of Kenya", ["Mwai Kibaki", "Uhuru Kenyatta", "Dedan Kimathi", "Jomo Kenyatta"], "Jomo Kenyatta");
-const userAnswer = "Mwai Kibaki";
-const isCorrect = question.checkAnswer(userAnswer);
-console.log(isCorrect); 
 
 // / qq2. Create a Quiz class with the following properties:
 // ● questions(array):An array of Question objects.
@@ -113,3 +109,8 @@ quiz1.submitAnswer("Asia");
 quiz1.nextQuestion();
 quiz1.submitAnswer(2);
 console.log(quiz1.score);
+
+const question = new Question("Who was the first president of Kenya", ["Mwai Kibaki", "Uhuru Kenyatta", "Dedan Kimathi", "Jomo Kenyatta"], "Jomo Kenyatta");
+const userAnswer = "Mwai Kibaki";
+const isCorrect = question.checkAnswer(userAnswer);
+console.log(isCorrect); 
